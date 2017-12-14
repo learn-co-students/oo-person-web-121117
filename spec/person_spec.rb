@@ -1,5 +1,6 @@
+require "pry"
 RSpec.describe "Person" do
-
+#
   let(:stella) { Person.new("Stella") }
   let(:blanche) { Person.new("Blanche") }
   let(:people) {[stella, blanche]}
@@ -47,9 +48,14 @@ RSpec.describe "Person" do
 
         it "a person instance can change his/her happiness index" do
           people.each do |person|
+            # binding.pry
             original_happiness = person.happiness
+            # binding.pry
             person.happiness += 1
+            # binding.pry
             expect(person.happiness).to eq(original_happiness + 1)
+            # binding.pry
+
           end
         end
 
