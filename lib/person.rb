@@ -66,17 +66,6 @@ class Person
        false
     end
   end
-  #
-  # topic: weather
-  #       returns 'blah blah sun blah rain' if the topic is weather (FAILED - 1)
-  #       if topic is weather, it makes both people in the convo one point more happy (FAILED - 2)
-  #       never makes either party more than 10 points happy
-  #         (hint: use your #happiness= method)
-  #       calls on the #happiness= method (FAILED - 3)
-  #     topic: other
-  #       returns 'blah blah blah blah blah' if the topic is not politics or weather (FAILED - 4)
-  #       if topic is not politics or weather, it doesn't affect happiness
-
 
   def start_conversation(person,topic)
 
