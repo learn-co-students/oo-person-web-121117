@@ -13,14 +13,14 @@ class Person
   end
 
   def happiness=(new_happiness)
-    @happiness = points(new_happiness)
+    @happiness = keep_points_in_range(new_happiness)
   end
 
   def hygiene=(new_hygiene)
-    @hygiene = points(new_hygiene)
+    @hygiene = keep_points_in_range(new_hygiene)
   end
 
-  def points(total_points)
+  def keep_points_in_range(total_points)
     if total_points > 10
       total_points = 10
     elsif total_points < 0
