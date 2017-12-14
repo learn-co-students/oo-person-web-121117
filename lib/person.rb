@@ -12,26 +12,21 @@ class Person
     @hygiene = 8
   end
 
-  def bankAccount
-  end
-
   def happiness=(new_happiness)
-    if new_happiness > 10
-      @happiness = 10
-    elsif new_happiness < 0
-      @happiness = 0
-    else
-      @happiness = new_happiness
-    end
+    @happiness = points(new_happiness)
   end
 
   def hygiene=(new_hygiene)
-    if new_hygiene > 10
-      @hygiene = 10
-    elsif new_hygiene < 0
-      @hygiene = 0
+    @hygiene = points(new_hygiene)
+  end
+
+  def points(total_points)
+    if total_points > 10
+      total_points = 10
+    elsif total_points < 0
+      total_points = 0
     else
-      @hygiene = new_hygiene
+      total_points = total_points
     end
   end
 
@@ -89,6 +84,8 @@ class Person
       @happiness=(@happiness)
     end
 end
+
+binding.pry
 
 
 # def happiness=(new_happiness)
